@@ -1,0 +1,254 @@
+:root {
+    --color-one: #E27012;
+    --color-two: #dbdbd3;
+    --color-three: #25282a;
+    --color-four: #fff;
+
+
+    /* --white-two: #dcdcdc;
+    --gray-one: #292929;
+    --gray-two: #383838;
+    --black-one: #000; */
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--color-two);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    min-height: 40px;
+    background-color: var(--color-one);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 8px 30px;
+}
+
+h1 {
+    color: var(--color-four);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.logoNavBar {
+    display: flex;
+    align-items: center;
+
+}
+
+.logoNavBar>img {
+    margin: 0 .5rem;
+    height: 2rem;
+}
+
+.headerBtnGroup {
+    display: flex;
+    gap: 15px;
+}
+
+.navBtn {
+    font-size: 16px;
+    padding: 6px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: var(--color-four);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.navBtn:hover {
+    border-bottom: 2px solid var(--color-three);
+}
+
+.sectionTitle {
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sectionDescription {
+    text-align: center;
+    color: var(--color-three);
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "mainContent sidebarContent";
+    padding: 20px;
+    flex: 1 0 auto;
+}
+
+.mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    grid-area: mainContent;
+}
+
+.categoryCard {
+    width: 280px;
+    height: 380px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.mainCardImg {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.categoryCard:hover {
+    border-color: var(--color-three);
+}
+
+.mainCategoryCardTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6px;
+}
+
+.mainCategoryCarDescription {
+    padding: 0 .5rem;
+}
+
+.sidebarContent {
+    background-color: var(--color-three);
+    color: var(--color-four);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    grid-area: sidebarContent;
+    gap: 20px;
+}
+
+.sidebarCard {
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.sidebarCard:hover {
+    border-color: var(--color-one);
+}
+
+.sidebarCardImg {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sidebarCardTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logoFooter {
+    display: flex;
+    align-items: center;
+}
+
+.logoFooter>img {
+    margin: 0 .5rem;
+    height: 2rem;
+}
+
+.footer {
+    width: 100%;
+    min-height: 40px;
+    background-color: var(--color-one);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 15px;
+}
+
+.footerAnchor {
+    color: var(--color-four);
+    text-decoration: none;
+}
+
+@media(max-width:630px) {
+    .header {
+        justify-content: center;
+    }
+
+    .gridContainer {
+        grid-template-areas:
+            "mainContent"
+            "sidebarContent";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .sidebarContent {
+        min-width: auto;
+    }
+
+    .footerAnchor {
+        font-size: 19px;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+}
+
+@media (max-width:463px) {
+
+    .sectionTitle {
+        margin: .3rem .3rem;
+        font-size: 1rem;
+    }
+
+    .sectionDescription {
+        margin: 0 .8rem;
+        font-size: .8rem;
+    }
+
+    .mainCategoryCardTitle {
+        font-size: .9rem;
+    }
+
+    .mainCategoryCarDescription {
+        font-size: .8rem;
+    }
+
+    .logoFooter>img,
+    .logoNavBar>img {
+        margin: 0 .5rem;
+        height: 1.5rem;
+    }
+}
